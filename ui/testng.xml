@@ -1,0 +1,8 @@
+<suite name="Test Suite">
+    <parameter name="baseUrl" value=""/>
+    <test name="Test">
+        <classes>
+
+        </classes>
+    </test>
+</suite>
