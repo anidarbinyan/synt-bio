@@ -1,8 +1,8 @@
 <suite name="Test Suite">
-    <parameter name="baseUrl" value=""/>
+    <parameter name="homePageUrl" value="https://demo.opencart.com/en-gb?route=common/home"/>
     <test name="Test">
-        <classes>
-
-        </classes>
+       <classes>
+            <class name="TestHomePage"/>
+</classes>
     </test>
 </suite>

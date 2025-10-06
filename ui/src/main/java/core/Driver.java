@@ -14,8 +14,10 @@ public class Driver {
     public static WebDriver getDriver() {
         if (driver == null) {
             ChromeOptions options = new ChromeOptions();
-            options.addArguments("--incognito");
             options.addArguments("--start-maximized");
+            options.addArguments("--disable-blink-features=AutomationControlled");
+            options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+            options.setExperimentalOption("useAutomationExtension", false);
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver(options);
         }

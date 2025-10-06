@@ -19,9 +19,11 @@ import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInC
 
 public class TestJob extends BaseTest {
 
+    private String validId = "validId";
+
     @Test(description = "TC-001")
     void testJobSuccessfulCreation() {
-        ScheduleJobRequest request = new ScheduleJobRequest("validId");
+        ScheduleJobRequest request = new ScheduleJobRequest(validId);
         ScheduleJobResponse response = scheduleJob(request, Endpoints.SCHEDULE_JOB.url);
 
         Assert.assertNotNull(response.getJobId(), "JobId should not be null");
@@ -36,7 +38,7 @@ public class TestJob extends BaseTest {
 
     @Test(description = "TC-002")
     public void testValidJob() {
-        ScheduleJobRequest request = new ScheduleJobRequest("validId");
+        ScheduleJobRequest request = new ScheduleJobRequest(validId);
         ScheduleJobResponse response = scheduleJob(request, Endpoints.SCHEDULE_JOB.url);
 
         Assert.assertNotNull(response.getJobId(), "JobId should not be null");

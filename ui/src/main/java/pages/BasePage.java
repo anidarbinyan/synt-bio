@@ -28,10 +28,4 @@ public abstract class BasePage {
     public String getCurrentUrl(){
         return driver.getCurrentUrl();
     }
-
-    public Boolean isCurrentURLCorrect(){
-        System.out.println(getCurrentUrl() + " current");
-        System.out.println(pageUrl() + " page");
-        return getCurrentUrl().equals(pageUrl());
-    }
 }
